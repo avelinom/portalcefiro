@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -9,20 +10,23 @@ const navItems = [
 
 export default function SiteHeader() {
   return (
-    <header className="border-b border-white/10 bg-slate-950/80 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
-        <Link
-          href="/"
-          className="text-lg font-semibold tracking-tight text-white"
-        >
-          Cefiro Advisors
+    <header className="border-b border-black/5 bg-white">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/cefiro-logo-2026.png"
+            alt="Cefiro Advisors"
+            width={140}
+            height={52}
+            priority
+          />
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-white/80 md:flex">
+        <nav className="hidden items-center gap-6 text-sm text-[var(--cefiro-text)]/70 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition hover:text-white"
+              className="transition hover:text-[var(--cefiro-text)]"
             >
               {item.label}
             </Link>
@@ -30,7 +34,7 @@ export default function SiteHeader() {
         </nav>
         <a
           href="https://www.cefiro.cloud/login"
-          className="rounded-full border border-white/30 px-4 py-2 text-sm text-white transition hover:border-white hover:bg-white/10"
+          className="rounded-full bg-[var(--cefiro-teal-2)] px-4 py-2 text-sm text-white transition hover:bg-[var(--cefiro-teal-4)]"
         >
           Acceder al Portal
         </a>

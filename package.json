@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "PROJECT_NAME=portalcefiro PROJECT_ID=portalcefiro PROJECT_PORT=3008 PROJECT_TYPE=frontend next dev --port 3008",
     "build": "next build",
-    "start": "next start",
+    "start": "PROJECT_NAME=portalcefiro PROJECT_ID=portalcefiro PROJECT_PORT=3008 PROJECT_TYPE=frontend next start --port 3008",
     "lint": "eslint"
   },
   "dependencies": {

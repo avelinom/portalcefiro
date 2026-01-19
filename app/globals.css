@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --cefiro-teal-1: #209090;
+  --cefiro-teal-2: #20a080;
+  --cefiro-teal-3: #30a090;
+  --cefiro-teal-4: #40a0a0;
+  --cefiro-teal-5: #10a080;
+  --cefiro-header-bg: #f0f0f0;
+  --cefiro-text: #1d1d1d;
 }
 
 @theme inline {

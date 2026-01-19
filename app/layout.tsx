@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex min-h-screen flex-col bg-slate-950 text-white">
+        <div className="flex min-h-screen flex-col bg-[var(--cefiro-header-bg)] text-[var(--cefiro-text)]">
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
