@@ -1,4 +1,3 @@
-import Hero from "@/components/Hero";
 import RagPrompt from "@/components/RagPrompt";
 import Link from "next/link";
 
@@ -35,7 +34,6 @@ const offerings = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Hero />
       <RagPrompt />
       <section
         id="offerings"
