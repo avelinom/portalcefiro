@@ -2,6 +2,18 @@
 
 Este archivo registra el contexto y las decisiones relevantes del trabajo en este proyecto.
 
+## Vercel: deploy al aceptar PR en main
+
+Para que **cada vez que aceptes un PR a `main`** se despliegue automáticamente en **portalcefiro** (https://portalcefiro.vercel.app):
+
+1. **Dashboard Vercel** → proyecto **portalcefiro** → **Settings** → **Git**.
+2. **Connected Git Repository**: debe ser **avelinom/portalcefiro** (el mismo repo de este proyecto). Si no está conectado, conectar con "Connect Git Repository".
+3. **Production Branch**: debe ser **main**. Si aparece otra rama, cambiarla a `main` y guardar.
+
+Con eso, cada merge a `main` en GitHub dispara un Production Deployment en portalcefiro.
+
+**Worktrees (ej. este `claude/gallant-wiles`):** Este directorio está vinculado al proyecto Vercel **portalcefiro** (`.vercel` está en `.gitignore`). Si trabajas en otro worktree y quieres que `vercel` despliegue a portalcefiro, ejecuta ahí: `vercel link -p portalcefiro --yes`. No uses el proyecto "gallant-wiles" en Vercel para este repo; el sitio de producción es portalcefiro.
+
 ## Registro
 
 - 2026-01-18: El usuario solicitó guardar todo lo que hagamos en este proyecto en `PROJECT_CONTEXT.md`.
