@@ -8,7 +8,7 @@
   --cefiro-teal-3: #30a090;
   --cefiro-teal-4: #40a0a0;
   --cefiro-teal-5: #10a080;
-  --cefiro-header-bg: #f0f0f0;
+  --cefiro-header-bg: #f4f7fb;
   --cefiro-text: #1d1d1d;
 }
 
@@ -19,12 +19,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
