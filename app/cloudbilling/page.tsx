@@ -1,37 +1,4 @@
-const services = [
-  {
-    title: "Consumos en la nube",
-    description:
-      "Visibilidad y control financiero para consumos cloud.",
-    href: "https://www.cefiro.cloud/landing",
-    cta: "Ir al landing actual",
-  },
-  {
-    title: "Servicios administrados y de migracion a nubes publicas",
-    description:
-      "Operacion, migracion y continuidad para ambientes multi-nube.",
-    cta: "Por desarrollar",
-  },
-  {
-    title: "Servicios de ciberseguridad y monitoreo continuo de SLA's",
-    description:
-      "Proteccion, observabilidad y cumplimiento operativo continuo.",
-    cta: "Proximamente",
-  },
-  {
-    title: "Disena, valida, implementa y monitorea tu DRP en 8 horas",
-    description:
-      "Estrategia acelerada de continuidad y recuperacion ante desastres.",
-    cta: "Proximamente",
-  },
-  {
-    title: "Plataforma de agentes inteligentes",
-    description:
-      "Flujos a la medida y ahorros medibles con tablero de adopcion y uso.",
-    href: "https://lirina.ai/",
-    cta: "Explorar Lirina",
-  },
-];
+import { services } from "@/lib/services";
 
 export default function CloudBillingPage() {
   return (
@@ -44,8 +11,9 @@ export default function CloudBillingPage() {
           Cloud billing con enfoque en visibilidad y control.
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--cefiro-text)]/70">
-          Esta pagina sera el destino de /landing. El objetivo es presentar un
-          resumen de servicios sin que sea el foco principal del negocio.
+          Gestionamos tus consumos cloud con visibilidad financiera, seguridad
+          continua y continuidad operativa para equipos de finanzas y
+          operaciones.
         </p>
       </section>
 
@@ -55,7 +23,7 @@ export default function CloudBillingPage() {
       >
         {services.map((service) => {
           const content = (
-            <div className="rounded-3xl border border-black/5 bg-white p-8 text-[var(--cefiro-text)] transition hover:border-[var(--cefiro-teal-2)] hover:shadow-[0_12px_40px_rgba(32,160,128,0.15)]">
+            <div className="rounded-3xl bg-white p-8 text-[var(--cefiro-text)] shadow-sm transition hover:shadow-[0_12px_40px_rgba(32,160,128,0.15)]">
               <h3 className="text-xl font-semibold">{service.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-[var(--cefiro-text)]/70">
                 {service.description}

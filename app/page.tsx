@@ -1,35 +1,6 @@
 import RagPrompt from "@/components/RagPrompt";
 import Link from "next/link";
-
-const offerings = [
-  {
-    title: "Consumos en la nube",
-    description:
-      "Visibilidad y control financiero para consumos cloud.",
-    href: "https://www.cefiro.cloud/landing",
-  },
-  {
-    title: "Servicios administrados y de migracion a nubes publicas",
-    description:
-      "Operacion, migracion y continuidad para ambientes multi-nube.",
-  },
-  {
-    title: "Servicios de ciberseguridad y monitoreo continuo de SLA's",
-    description:
-      "Proteccion, observabilidad y cumplimiento operativo continuo.",
-  },
-  {
-    title: "Disena, valida, implementa y monitorea tu DRP en 8 horas",
-    description:
-      "Estrategia acelerada de continuidad y recuperacion ante desastres.",
-  },
-  {
-    title: "Plataforma de agentes inteligentes",
-    description:
-      "Flujos a la medida y ahorros medibles con tablero de adopcion y uso.",
-    href: "https://lirina.ai/",
-  },
-];
+import { services } from "@/lib/services";
 
 export default function Home() {
   return (
@@ -57,9 +28,9 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto grid w-full max-w-6xl gap-6 px-6 pb-16 md:grid-cols-2">
-        {offerings.map((service) => {
+        {services.map((service) => {
           const card = (
-            <div className="rounded-3xl border border-black/5 bg-white p-8 text-[var(--cefiro-text)] transition hover:border-[var(--cefiro-teal-2)] hover:shadow-[0_12px_40px_rgba(32,160,128,0.15)]">
+            <div className="rounded-3xl bg-white p-8 text-[var(--cefiro-text)] shadow-sm transition hover:shadow-[0_12px_40px_rgba(32,160,128,0.15)]">
               <h3 className="text-xl font-semibold">{service.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-[var(--cefiro-text)]/70">
                 {service.description}
@@ -90,7 +61,7 @@ export default function Home() {
         ].map((item) => (
           <div
             key={item}
-            className="rounded-2xl border border-[var(--cefiro-teal-1)]/15 bg-white p-6 text-sm text-[var(--cefiro-text)]/70"
+            className="rounded-2xl bg-white p-6 text-sm text-[var(--cefiro-text)]/70 shadow-sm"
           >
             {item}
           </div>
@@ -110,9 +81,10 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-base leading-relaxed text-[var(--cefiro-text)]/70">
-            Este landing sera independiente del portal administrativo. Aqui
-            definiremos mensajes mas enfocados en servicios y resultados,
-            dejando claro el valor para equipos financieros y de operaciones.
+            Cefiro combina visibilidad financiera, seguridad continua y
+            continuidad operativa para equipos que gestionan ambientes cloud.
+            Nuestras soluciones estan disenadas para dar claridad a finanzas y
+            operaciones.
           </p>
         </div>
       </section>
@@ -120,13 +92,13 @@ export default function Home() {
         id="contact"
         className="mx-auto w-full max-w-6xl px-6 pb-20"
       >
-        <div className="rounded-3xl border border-black/5 bg-white p-10">
+        <div className="rounded-3xl bg-white p-10 shadow-sm">
           <h3 className="text-2xl font-semibold tracking-tight text-[var(--cefiro-text)]">
             Conversemos sobre tu facturacion cloud
           </h3>
           <p className="mt-3 text-sm text-[var(--cefiro-text)]/70">
-            Pronto definiremos el formulario y canales de contacto. Por ahora,
-            usa el acceso al portal o escribenos.
+            Contactanos para explorar como Cefiro puede darte visibilidad y
+            control sobre tus consumos cloud.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
