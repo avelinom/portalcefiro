@@ -9,7 +9,7 @@ export const services: Service[] = [
   {
     title: "Consumos en la nube",
     description: "Visibilidad y control financiero para consumos cloud.",
-    href: "https://www.cefiro.cloud/landing",
+    href: "https://cefiro-admin-portal.vercel.app/landing",
     cta: "Ir al landing actual",
   },
   {
